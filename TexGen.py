@@ -326,6 +326,7 @@ def eval_function(inString):
     return outString
 
 def cleanup_function(inString):
+    
     outString = inString.replace("+  -", "-")
     outString = outString.replace("+ -", "-")
     outString = outString.replace("+-", "-")
@@ -357,9 +358,21 @@ def generate(inString, genCount):
     
     answerKey = ""
     outString = ""
+    
     outString = printHeader_function(inString)
     outString = ID_function(outString, genCount)
     outString = loop_function(outString)
+    
+    ##### Keeps questions together #####################
+    #tString = "\\end{minipage}\\begin{minipage}{\\textwidth}\\tgQ{}"
+    #outString = outString.replace("\\tgQ{}", tString)
+    #outString = outString.replace(tString, "\\begin{minipage}{\\textwidth}\\tgQ{}", 1)
+    #if outString.find("\\tgKey{}") >= 0:
+    #    outString = outString.replace("\\tgKey{}", "\\end{minipage}\\tgKey{}")
+    #else:
+    #    outString =+ "\\end{minipage}"
+    #####################################################
+    
     outString = rand_function(outString)
     outString = var_function(outString)
     outString = early_eval_function(outString)

@@ -94,7 +94,7 @@ def reduce(a):
 ############################################################
 
 g_addLatexHeader = False
-g_shuffleQuestions = False
+#g_shuffleQuestions = False
 
 
 ############################################################
@@ -179,7 +179,7 @@ def rand_function(inString):
     return outString
 
 def var_function(inString):
-# Takes care of \tgSet[name]{value} and \tgV{name}
+    # Takes care of \tgSet[name]{value} and \tgV{name}
     varDict = dict()
     outString = ""
     x = 0
@@ -215,7 +215,7 @@ def keymaker_function(inString):
 # answerKey = keymaker_function(inString)
 # Takes care of \tgQ{} and \tgA{string}
     answerCount = 0
-    answerKey = "Answer Key: "
+    answerKey = "\\vspace{1 in}Answer Key: \\\\"
     outString = ""
     x = 0
     qString = "\\tgQ{}"
@@ -231,7 +231,7 @@ def keymaker_function(inString):
         elif inString[x:x+len(aString)] == aString:
             x0 = x
             temp = findClose('{','}', inString[x+len(aString):])
-            answerKey += str(answerCount) + ')~' + temp + "\\hspace{.5 in} "
+            answerKey += str(answerCount) + ')~' + temp + "\\\\"
             x += (len(aString) + len(temp) + 1)
             if inString[x] == '\n' and inString[x0-1] == '\n':
                 x += 1
@@ -239,23 +239,31 @@ def keymaker_function(inString):
         else: 
             outString += inString[x]
             x += 1
-    #return [outString, answerKey[:-3]]
     return [outString, answerKey[:]]
 
 def shuffleQuestions_function(inString):
-    startIndex = inString.find("\\tgQ{}")
-    endIndex = inString.find("\\tgQ{}", startIndex)
-    outString = inString[0, startIndex]
-    qArray = []
+    # \tgShuffleQuestions starts the questions
     outString = ""
-    while endIndex != -1:
-        qArray.appaend(inString[startIndex, endIndex])
-        startIndex = endIndex
-        endIndex = inString.find("\\tgQ{}", startIndex)
-    random.shuffle(qArray)
-    for x in qArray:
-        outString += x
-    return outString
+    tString = inString
+    printAnswerKey = False
+    if tString.find("\\tgShuffleQuestions{}") >= 0:
+        if tString.find("\\tgKey{}") >= 0:
+            printAnswerKey = True
+            tString = tString.replace("\\tgKey{}", "")
+        tList = tString.split("\\tgShuffleQuestions{}", 1)
+        tList[1] = "\n" + tList[1] # ensures there is at least one newline
+        qList = tList[1].split("\\tgQ{}")
+        qList.pop(0) # gets rid of the newlines between \shuffle and \tgQ
+        outString = tList[0]
+        random.shuffle(qList)
+        for x in qList:
+            outString += "\\tgQ{}"
+            outString += x
+        if printAnswerKey:
+            outString += "\n\\tgKey{}"
+        return outString
+    else:
+        return inString
 
 def printKey_function(inString, answerKey):
     outString = ""
@@ -285,6 +293,22 @@ def printHeader_function(inString):
             x += 1
     return outString
 
+def early_eval_function(inString):
+# Takes care of \tgEval{string}
+    outString = ""
+    x = 0
+    tString = "\\tgEarlyEval{"
+    while x < len(inString):
+        if inString[x:x+len(tString)] == tString:
+            temp = findClose('{','}',inString[x+len(tString):])
+            outString += str(eval(temp))
+            x += (len(tString) + len(temp) + 1)
+            continue
+        else: 
+            outString += inString[x]
+            x += 1
+    return outString
+
 def eval_function(inString):
 # Takes care of \tgEval{string}
     outString = ""
@@ -302,6 +326,7 @@ def eval_function(inString):
     return outString
 
 def cleanup_function(inString):
+    
     outString = inString.replace("+  -", "-")
     outString = outString.replace("+ -", "-")
     outString = outString.replace("+-", "-")
@@ -318,10 +343,13 @@ def cleanup_function(inString):
     outString = outString.replace("-~~+", "-")
     outString = outString.replace("-~+", "+")
     
-    for x in range(20):
-        outString = outString.replace("\n  \n", "\n")
-        outString = outString.replace("\n \n", "\n")
-        outString = outString.replace("\n\n", "\n")
+    #for x in range(20):
+    #    outString = outString.replace("\n  \n", "\n")
+    #    outString = outString.replace("\n \n", "\n")
+    ##    outString = outString.replace("\n\n", "\n")
+    #    outString = outString.replace("\r\n  \r\n", "\r\n")
+    #    outString = outString.replace("\r\n \r\n", "\r\n")
+    #    outString = outString.replace("\r\n\r\n", "\r\n")
     return outString
 
 def generate(inString, genCount):
@@ -330,13 +358,26 @@ def generate(inString, genCount):
     
     answerKey = ""
     outString = ""
+    
     outString = printHeader_function(inString)
     outString = ID_function(outString, genCount)
     outString = loop_function(outString)
+    
+    ##### Keeps questions together #####################
+    tString = "\\end{minipage}\\begin{minipage}{\\textwidth}\\tgQ{}"
+    outString = outString.replace("\\tgQ{}", tString)
+    outString = outString.replace(tString, \
+"                        \\begin{minipage}{\\textwidth}\\tgQ{}", 1)
+    if outString.find("\\tgKey{}") >= 0:
+        outString = outString.replace("\\tgKey{}", "\\end{minipage}\\tgKey{}")
+    else:
+        outString =+ "\\end{minipage}"
+    #####################################################
+    
     outString = rand_function(outString)
-    outString = var_function(outString) 
-    if g_shuffleQuestions:
-        outString = shuffleQuestions_function(inString)    
+    outString = var_function(outString)
+    outString = early_eval_function(outString)
+    outString = shuffleQuestions_function(outString)    
     [outString, answerKey] = keymaker_function(outString)
     outString = printKey_function(outString, answerKey)
     outString = eval_function(outString)
