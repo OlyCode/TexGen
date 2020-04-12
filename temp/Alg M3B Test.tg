@@ -16,7 +16,7 @@ $\tgV{a}, \tgEval{\tgV{a}+\tgV{b}}, \tgEval{\tgV{a}+2*\tgV{b}}, \tgEval{\tgV{a}+
 \tgSet[b]{\tgRand[npm]{2,20}}
 \tgSet[n]{\tgRand[n]{24,30}}
 \tgQ{}) Find the \tgV{n}th number in the sequence: \\ \\
-$\tgV{a}, \tgEval{\tgV{a}+\tgV{b}}, \tgEval{\tgV{a}+2*\tgV{b}}, \tgEval{\tgV{a}+3*\tgV{b}}  . . .$ 
+$\tgV{a}, \tgEval{\tgV{a}+\tgV{b}}, \tgEval{\tgV{a}+2*\tgV{b}}, \tgEval{\tgV{a}+3*\tgV{b}}\ldots $ 
 \tgA{$\tgEval{\tgV{b} * \tgV{n} + \tgV{a} - \tgV{b}}$}
 
 \hrulefill
@@ -26,7 +26,7 @@ $\tgV{a}, \tgEval{\tgV{a}+\tgV{b}}, \tgEval{\tgV{a}+2*\tgV{b}}, \tgEval{\tgV{a}+
 \tgSet[a]{\tgRand[npm]{2,14}}
 \tgSet[b]{\tgRand[n]{2,12}}
 \tgQ{}) Write the explicit formula for the sequence: \\ \\
-$\tgV{a}, \tgEval{\tgV{a}*\tgV{b}}, \tgEval{\tgV{a}*\tgV{b}**2}, \tgEval{\tgV{a}*\tgV{b}**3}\ldots $
+$\tgV{a}, \tgEval{\tgV{a} *\tgV{b}}, \tgEval{\tgV{a}*\tgV{b}**2}, \tgEval{\tgV{a}*\tgV{b}**3}\ldots $
 \tgA{$a_n~=~\tgV{a}(\tgV{b})^{n-1}$}
 
 \hrulefill
@@ -71,7 +71,7 @@ $a_n = \tgV{a}(\tgV{b})^{n-1}$
 \tgSet[t]{\tgRand[n]{5,20}}
 
 \tgQ{}) You have \$\tgV{a} in a bank account that pays \tgV{b}\% interest. Write an equation for how much money you will have after \tgV{t} years. \\ \\
-\tgA{$\tgV{a}*1.0\tgV{b}^{\tgV{t}}$} 
+\tgA{$\tgV{a}(1.0\tgV{b})^{\tgV{t}}$} 
 
 \hrulefill
 }
@@ -82,7 +82,7 @@ $a_n = \tgV{a}(\tgV{b})^{n-1}$
 \tgSet[b]{\tgRand[n]{10,19}}
 \tgSet[t]{\tgRand[n]{5,20}}
 \tgQ{}) You bought a car for \$\tgV{a}, but it loses its value at a rate of \tgV{b}\% per year, write an equation for how much the car will be worth after \tgV{t} years. \\ \\
-\tgA{$\tgV{a}*0.\tgEval{100-\tgV{b}}^{\tgV{t}}$} 
+\tgA{$\tgV{a}(0.\tgEval{100-\tgV{b}})^{\tgV{t}}$} 
 
 \hrulefill
 }
@@ -93,7 +93,7 @@ $a_n = \tgV{a}(\tgV{b})^{n-1}$
 \tgSet[c]{\tgRand[n]{3,10}}
 
 \tgQ{}) There are \tgV{a} bacteria present in a colony. The number of bacteria doubles every \tgV{b} hours. Write an equation for how many bacteria will be present after \tgEval{\tgV{b}*\tgV{c}} hours have passed. \\ \\
-\tgA{$\tgV{a}*2^{\tgV{c}}$} 
+\tgA{$\tgV{a}(2)^{\tgV{c}}$} 
 
 \hrulefill
 }
@@ -103,7 +103,7 @@ $a_n = \tgV{a}(\tgV{b})^{n-1}$
 \tgSet[b]{\tgRand[n]{2,9}}
 \tgSet[c]{\tgRand[n]{3,10}}
 \tgQ{}) A medicine has a half-life of \tgV{b} hours. You have \tgV{a} mg, write the equation for how much will you have in your system after \tgEval{\tgV{b}*\tgV{c}} hours have passed. \\ \\
-\tgA{$\tgV{a}*(\frac{1}{2})^{\tgV{c}}$} 
+\tgA{$\tgV{a}(\frac{1}{2})^{\tgV{c}}$} 
 
 \hrulefill
 }
@@ -116,7 +116,7 @@ $a_n = \tgV{a}(\tgV{b})^{n-1}$
 \tgSet[t]{\tgRand[n]{5,20}}
 
 \tgQ{}) You ave made an investment of \$\tgV{a} that gains \tgV{b}.\tgV{B}\% interest. Write an equation for how much your investment will be worth after \tgV{t} years. \\ \\
-\tgA{$\tgV{a}*1.0\tgV{b}\tgV{B}^{\tgV{t}}$} 
+\tgA{$\tgV{a}(1.0\tgV{b}\tgV{B})^{\tgV{t}}$} 
 
 \hrulefill
 }

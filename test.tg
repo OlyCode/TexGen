@@ -1,29 +1,29 @@
-\tgLatexHeader{}
+\tgLatexHeader{Test Worksheet}
 
 \tgShuffleQuestions{}
 
-\tgLoop[4]{
+\tgLoop[2]{
 \tgSet[a]{\tgRand[n]{10,100}}
 \tgSet[b]{\tgRand[n]{10,100}}
 \tgQ{}) $\tgV{a} + \tgV{b}$ = \underline{\hspace{2 in}}
 \tgA{\tgEval{\tgV{a} + \tgV{b}}}
 }
 
-\tgLoop[4]{
+\tgLoop[2]{
 \tgSet[a]{\tgRand[n]{10,100}}
 \tgSet[b]{\tgRand[n]{10,100}}
 \tgQ{}) $\tgV{a} - \tgV{b}$ = \underline{\hspace{2 in}}
 \tgA{\tgEval{\tgV{a} - \tgV{b}}}
 }
 
-\tgLoop[4]{
+\tgLoop[2]{
 \tgSet[a]{\tgRand[n]{10,100}}
 \tgSet[b]{\tgRand[n]{10,100}}
 \tgQ{}) $\tgV{a} * \tgV{b}$ = \underline{\hspace{2 in}}
 \tgA{\tgEval{\tgV{a} * \tgV{b}}}
 }
 
-\tgLoop[4]{
+\tgLoop[2]{
 \tgSet[a]{\tgRand[n]{10,100}}
 \tgSet[b]{\tgRand[n]{10,100}}
 \tgSet[c]{\tgRand[n]{-100,-10}}

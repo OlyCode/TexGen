@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.10.19)  11 APR 2020 21:30
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.10.19)  11 APR 2020 21:52
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -589,11 +589,35 @@ Underfull \hbox (badness 10000) in paragraph at lines 250--251
  []
 
 
-Overfull \hbox (14.09923pt too wide) in paragraph at lines 256--257
-\OT1/cmr/m/n/12 5) $\OML/cmm/m/it/12 a[] [] \OT1/cmr/m/n/12 =  [] \OMS/cmsy/m/n
-/12 ^^@ \OT1/cmr/m/n/12 7(8)[]$  6) $\OML/cmm/m/it/12 a[] [] \OT1/cmr/m/n/12 = 
- [] \OMS/cmsy/m/n/12 ^^@ \OT1/cmr/m/n/12 11(9)[]$  7) $9765625$  8) $\OMS/cmsy/
-m/n/12 ^^@\OT1/cmr/m/n/12 11000000000000000$
+Overfull \hbox (132.42274pt too wide) in paragraph at lines 256--257
+\OT1/cmr/m/n/12 9) $\OMS/cmsy/m/n/12 ^^@\OT1/cmr/m/n/12 43\OML/cmm/m/it/12 ; \O
+MS/cmsy/m/n/12 ^^@\OT1/cmr/m/n/12 28\OML/cmm/m/it/12 ; \OMS/cmsy/m/n/12 ^^@\OT1
+/cmr/m/n/12 13\OML/cmm/m/it/12 ;  []\OT1/cmr/m/n/12 2 []$  10) $45\OML/cmm/m/it
+/12 ; \OT1/cmr/m/n/12 49\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 53\OML/cmm/m/it/12 ;
+  []\OT1/cmr/m/n/12 57 []$  11) $7\OML/cmm/m/it/12 ;  []\OT1/cmr/m/n/12 84\OML/
+cmm/m/it/12 ;  []\OT1/cmr/m/n/12 1008\OML/cmm/m/it/12 ;  []\OT1/cmr/m/n/12 1209
+6 []$  12) $13\OML/cmm/m/it/12 ;  []\OT1/cmr/m/n/12 156\OML/cmm/m/it/12 ;  []\O
+T1/cmr/m/n/12 1872\OML/cmm/m/it/12 ;  []\OT1/cmr/m/n/12 22464 []$
+ []
+
+
+Overfull \hbox (54.62889pt too wide) in paragraph at lines 256--257
+\OT1/cmr/m/n/12 13) $1849(1\OML/cmm/m/it/12 :\OT1/cmr/m/n/12 08)[]$  14) $3297(
+1\OML/cmm/m/it/12 :\OT1/cmr/m/n/12 06)[]$  15) $3896(0\OML/cmm/m/it/12 :\OT1/cm
+r/m/n/12 82)[]$  16) $1896(0\OML/cmm/m/it/12 :\OT1/cmr/m/n/12 83)[]$  17) $792(
+2)[]$
+ []
+
+
+Overfull \hbox (26.15166pt too wide) in paragraph at lines 256--257
+\OT1/cmr/m/n/12 18) $203(2)[]$  19) $322([])[]$  20) $296([])[]$  21) $768(1\OM
+L/cmm/m/it/12 :\OT1/cmr/m/n/12 0911)[]$  22) $937(1\OML/cmm/m/it/12 :\OT1/cmr/m
+/n/12 0516)[]$
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 256--257
+
  []
 
 [3] (./a.aux) ) 
@@ -612,7 +636,7 @@ r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share
 /texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive
 /texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf
 -dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on a.pdf (3 pages, 71159 bytes).
+Output written on a.pdf (3 pages, 70591 bytes).
 PDF statistics:
  42 PDF objects out of 1000 (max. 8388607)
  29 compressed objects within 1 object stream
