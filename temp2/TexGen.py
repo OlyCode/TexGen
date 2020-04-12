@@ -231,7 +231,7 @@ def keymaker_function(inString):
         elif inString[x:x+len(aString)] == aString:
             x0 = x
             temp = findClose('{','}', inString[x+len(aString):])
-            answerKey += str(answerCount) + ')~' + temp + "\\hspace{.5 in} "
+            answerKey += str(answerCount) + ') ' + temp + "\\hspace{.5 in}"
             x += (len(aString) + len(temp) + 1)
             if inString[x] == '\n' and inString[x0-1] == '\n':
                 x += 1
@@ -308,16 +308,6 @@ def cleanup_function(inString):
     outString = outString.replace("-  -", "+")
     outString = outString.replace("- -", "+")
     outString = outString.replace("--", "+")
-    outString = outString.replace("+~~-", "-")
-    outString = outString.replace("+~-", "-")
-    outString = outString.replace("-~~-", "+")
-    outString = outString.replace("-~-", "+")    
-    outString = outString.replace("-  +", "-")
-    outString = outString.replace("- +", "-")
-    outString = outString.replace("-+", "-")
-    outString = outString.replace("-~~+", "-")
-    outString = outString.replace("-~+", "+")
-    
     for x in range(20):
         outString = outString.replace("\n  \n", "\n")
         outString = outString.replace("\n \n", "\n")

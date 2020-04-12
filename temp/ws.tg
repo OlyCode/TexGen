@@ -1,0 +1,41 @@
+\tgLatexHeader{Sequences Worksheet}
+
+\tgLoop[2]{
+\tgSet[a]{\tgRand[n]{-100,100}}
+\tgSet[b]{\tgRand[npm]{2,20}}
+\tgQ{}. Write the explicit formula for the sequence:  $\tgV{a}, 
+\tgEval{\tgV{a}+\tgV{b}}, \tgEval{\tgV{a}+2*\tgV{b}}, \tgEval{\tgV{a}+3*\tgV{b}}  . . .$ \underline{\hspace{2 in}}
+\tgA{$a_n = \tgV{b}n + \tgEval{\tgV{a}-\tgV{b}}$}
+\vspace{.2in}
+}
+
+\tgLoop[2]{
+\tgSet[a]{\tgRand[npm]{2,14}}
+\tgSet[b]{\tgRand[n]{2,12}}
+\tgQ{}. Write the explicit formula for the sequence:  $\tgV{a}, 
+\tgEval{\tgV{a}*\tgV{b}}, \tgEval{\tgV{a}*\tgV{b}**2}, \tgEval{\tgV{a}*\tgV{b}**3} . . .$ \underline{\hspace{2 in}}
+\tgA{$a_n = \tgV{a}(\tgV{b})^{n-1}$}
+\vspace{.2in}
+}
+
+\tgLoop[2]{
+\tgSet[a]{\tgRand[n]{-100,100}}
+\tgSet[b]{\tgRand[npm]{2,20}}
+\tgQ{}. Write the first four numbers of sequence given the following
+explicit formula:   $a_n = \tgV{b}n + \tgEval{\tgV{a}-\tgV{b}}$ 
+\tgA{$\tgV{a}, \tgEval{\tgV{a}+\tgV{b}}, \tgEval{\tgV{a}+2*\tgV{b}}, \tgEval{\tgV{a}+3*\tgV{b}} . . .$}
+\vspace{.2in}
+}
+
+\tgLoop[2]{
+\tgSet[a]{\tgRand[npm]{2,14}}
+\tgSet[b]{\tgRand[n]{2,12}}
+\tgQ{}. Write the first four numbers of sequence given the following
+explicit formula:   $a_n = \tgV{a}(\tgV{b})^{n-1}$
+\tgA{$\tgV{a}, \tgEval{\tgV{a}*\tgV{b}}, \tgEval{\tgV{a}*\tgV{b}**2}, \tgEval{\tgV{a}*\tgV{b}**3} . . .$}
+\vspace{.2in}
+}
+
+
+
+\tgKey{}

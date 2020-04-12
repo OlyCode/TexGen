@@ -1,0 +1,95 @@
+\documentclass[12pt]{article} 
+\usepackage[utf8]{inputenc} % set input encoding
+%%% Examples of Article customizations
+% These packages are optional, depending whether you want the features 
+% they provide.
+% See the LaTeX Companion or other references for full information.
+%%% PAGE DIMENSIONS
+\usepackage{geometry} % to change the page dimensions
+ \geometry{letterpaper} % or letterpaper (US) or a5paper or....
+ \geometry{margin=1in} % change the margins to 1 inch all round
+ \geometry{portrait} % set up the page for landscape
+\setlength\parindent{0pt}
+%\usepackage{graphicx} % support the \includegraphics command and options
+% \usepackage[parfill]{parskip} % Activate to begin paragraphs with an 
+% empty line rather than an indent
+%%% PACKAGES
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.15}
+
+%\usepackage{booktabs} % for much better looking tables
+%\usepackage{array} % for better arrays (eg matrices) in maths
+%\usepackage{paralist} % very flexible & customisable lists 
+%                     %(eg. enumerate/itemize, etc.)
+%\usepackage{verbatim} % adds environment for commenting out blocks 
+%                     % of text & for better verbatim
+%\usepackage{subfig} % make it possible to include more than one captioned 
+%                   % figure/table
+% These packages are all incorporated in the memoir class to one degree 
+% or another...
+
+\begin{document}
+%\section{First section}
+%\subsection{A subsection}
+\begin{flushright}
+Name: \underline{\hspace{2.5 in}}
+\end{flushright}
+\begin{flushright}
+Worksheet ID: %\tgID{}
+\end{flushright}
+\section*{Linear and Exponential Functions (M.3A)}
+
+\begin{tikzpicture}
+  \begin{axis}[ 
+	xmin=-5,   xmax=5,
+	ymin=-5,   ymax=5,
+	xtick={-5,...,5},
+	ytick={-5,...,5},
+    xlabel=$x$,
+    ylabel={$f(x) = x^2 - x +4$}
+  ] 
+    \addplot {x^2 - x +4}; 
+  \end{axis}
+\end{tikzpicture}
+
+Use the graph above to answer the following quesitons:
+
+1. Find $f(1)$.
+
+2. Find $x$ when $f(x) = 2$. 
+
+\hline
+
+%\vspace{1 in}
+
+\begin{tabular}{|c|c|}
+\hline 
+$x$ & $g(x)$ \tabularnewline
+\hline 
+\hline 
+$3$ & $5$ \tabularnewline
+\hline 
+$3$ & $5$ \tabularnewline
+\hline 
+$3$ & $5$ \tabularnewline
+\hline 
+$3$ & $5$ \tabularnewline
+\hline 
+$3$ & $5$ \tabularnewline
+\hline 
+$3$ & $5$ \tabularnewline
+\hline 
+\end{tabular}
+
+Use the table above to answer the following quesitons:
+
+3. Find $g(4)$.
+
+4. Find $g(x)$ when $x=7$.
+
+5. Find $x$ when $g(x) = 3$.
+
+\hline
+
+\end{document}
+

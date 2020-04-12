@@ -1,0 +1,33 @@
+\tgLatexHeader{Linear and Exponential Functions Practice Test}
+
+\tgLoop[10]{
+\tgSet[a]{\tgRand[n]{10,100}}
+\tgSet[b]{\tgRand[n]{10,100}}
+\tgQ{}. $\tgV{a} + \tgV{b}$ = \underline{\hspace{2 in}}
+\tgA{\tgEval{\tgV{a} + \tgV{b}}}
+}
+
+\tgLoop[10]{
+\tgSet[a]{\tgRand[n]{10,100}}
+\tgSet[b]{\tgRand[n]{10,100}}
+\tgQ{}. $\tgV{a} - \tgV{b}$ = \underline{\hspace{2 in}}
+\tgA{\tgEval{\tgV{a} - \tgV{b}}}
+}
+
+\tgLoop[10]{
+\tgSet[a]{\tgRand[n]{10,100}}
+\tgSet[b]{\tgRand[n]{10,100}}
+\tgQ{}. $\tgV{a} * \tgV{b}$ = \underline{\hspace{2 in}}
+\tgA{\tgEval{\tgV{a} * \tgV{b}}}
+}
+
+\tgLoop[10]{
+\tgSet[a]{\tgRand[n]{10,100}}
+\tgSet[b]{\tgRand[n]{10,100}}
+\tgSet[c]{\tgRand[n]{-100,-10}}
+\tgQ{}. $\tgV{a}x^{2} + \tgV{b}x + \tgV{c}$ = \underline{\hspace{2 in}}
+\tgA{\tgEval{(-\tgV{b}/(2.\tgV{a}))} +/- \tgEval{math.sqrt(\tgV{b}**2-4*
+\tgV{a}*\tgV{c})/(2*\tgV{a})}}
+}
+
+\tgKey{}
